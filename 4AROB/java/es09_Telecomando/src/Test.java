@@ -1,46 +1,29 @@
 public class Test {
     public static void main(String[] args) {
-        Telecomando tel = new Telecomando();
-        System.out.println(tel.toString());
+        Telecomando t;
 
-        tel.setAcceso("si");
-        System.out.println(tel.toString());
+        t= new Telecomando();
 
-        tel.setCanaleDown();
-        System.out.println("Canale: " + tel.getCanale());
-        tel.setCanaleDown();
+        t.premiOnOff();
 
-        System.out.println("Canale: " + tel.getCanale());
-        tel.setCanale(-1);
+        System.out.println(t.isAcceso());
+        System.out.println(t.setgetCanale(5));
+        System.out.println(t.getVolume());
 
-        System.out.println("Canale: " + tel.getCanale());
-        tel.setCanale(5);
+        t.canaleGiu();
+        t.volumeGiu();
 
-        System.out.println("Canale: "+ tel.getCanale());
-        tel.setCanale(50);
+        System.out.println(t.setgetCanale());
+        System.out.println(t.getVolume());
 
-        System.out.println("Canale: "+ tel.getCanale());
+        t.volumeSu();
+        t.canaleSu();
 
-        tel.setVolumeDown();
+        System.out.println(t.setgetCanale());
+        System.out.println(t.getVolume());
 
-        System.out.println("Volume: "+ tel.getVolume());
-        tel.setVolumeDown();
+        t.muto();
 
-        System.out.println("Volume: "+ tel.getVolume());
-        tel.setVolumeUp();
-
-        System.out.println("Volume: "+ tel.getVolume());
-        tel.setVolumeUp();
-
-        System.out.println("Volume: "+ tel.getVolume());
-        tel.setVolumeUp();
-
-        System.out.println("Volume: "+ tel.getVolume());
-
-        System.out.println(tel.toString());
-
-        tel.setAcceso("no");
-        System.out.println(tel.toString());
-
+        System.out.println(t.getVolume());
     }
 }

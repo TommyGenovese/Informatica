@@ -18,19 +18,20 @@ public class Data {
         else
             this.a = 1;
     }
+
     public  String toString(){
         String s;
 
         s = g + "/" + m + "/" + a; // creerà  21/10/2019
         return s;
     }
+
     public  void setG(int g){
         int []v={31,28,31,30,31,30,31,31,30,31,30,31};
         if(v[m-1] >= g && g>0)
             this.g = g;
         else
             this.g = 1;
-
     }
 
     public int setA(int a) {
