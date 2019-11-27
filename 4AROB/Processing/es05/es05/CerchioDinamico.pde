@@ -6,8 +6,8 @@ public class CerchioDinamico extends Cerchio{
   
   public CerchioDinamico(){
     super();
-    speedx = 10;
-    speedy = 3;
+    speedx = 25;
+    speedy = 12.75;
   }
   
   public void move(){
