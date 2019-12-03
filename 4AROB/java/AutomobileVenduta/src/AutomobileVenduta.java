@@ -44,7 +44,9 @@ public class AutomobileVenduta {
     }
 
     public boolean isPiùCara(AutomobileVenduta a){
-        if(a.)
+        if(a.prezzo > prezzo){ //bisogna mettere un comando comparatore non il maggiore, cercalo sulle slide
+
+        }
     }
 
     @Override

@@ -1,6 +1,5 @@
 public class Vocabolario extends Libro {
     private int numDefinizioni;
-    private float avePage;
     private static final int DEFIN_DEF = 1000;
 
     public Vocabolario(int numDefinizioni, int numPagine){
@@ -11,10 +10,10 @@ public class Vocabolario extends Libro {
             this.numDefinizioni = DEFIN_DEF;
     }
 
-    public void definitionMessage(int numDefinizioni, int numPagine){
+    public void definitionMessage(){
         pageMessage();
-        System.out.println(numDefinizioni);
-        System.out.println(numDefinizioni/getNumPagine());
+        System.out.println("il numero di definizioni e': " + numDefinizioni);
+        System.out.println("il numero di definizioni media per pagina e': " + numDefinizioni/getNumPagine());
     }
 
     public int getNumDefinizioni(){
