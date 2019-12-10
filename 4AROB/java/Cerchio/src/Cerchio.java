@@ -32,8 +32,6 @@ public class Cerchio {
 
     @Override
     public String toString() {
-        return "Cerchio{" +
-                "raggio=" + raggio + "|area=" + this.getArea() + "|circonferenza=" + this.getCirconferenza() +
-                '}';
+        return "Cerchio{" + "raggio=" + raggio + "|area=" + this.getArea() + "|circonferenza=" + this.getCirconferenza() +  '}';
     }
-}+
+}
