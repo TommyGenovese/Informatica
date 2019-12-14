@@ -5,4 +5,3 @@ public enum TipoLingua {
     D[("4")],
     ES[("5")];
 }
- 

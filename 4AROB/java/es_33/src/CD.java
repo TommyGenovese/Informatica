@@ -21,6 +21,6 @@ public class CD extends Cassetta {
 
     @Override
     public String toString() {
-        return super.toString();
+        return super.toString() + "numero brani: "+ nBrani;
     }
 }

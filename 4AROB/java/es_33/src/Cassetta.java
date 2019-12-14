@@ -1,10 +1,10 @@
 public class Cassetta {
 
-    private int codice;
-    private String titolo;
-    private int durataSec;
-    private static double sconto;
-    private int nCopie;
+    protected int codice;
+    protected String titolo;
+    protected int durataSec;
+    protected static double sconto;
+    protected int nCopie;
 
     public Cassetta(String titolo, int durataSec){
         this.titolo = titolo;
@@ -23,6 +23,11 @@ public class Cassetta {
 
     public void setSconto(double percentuale){
         this.sconto = percentuale;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 
 }
