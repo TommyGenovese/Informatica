@@ -1,4 +1,4 @@
-public class Cerchio {
+/*public class Cerchio {
   private float dim;   //diametro cerchio
   private final static int DIM_DEFAULT = 10;
   private float cordX;  //coordinate del centro
@@ -61,3 +61,4 @@ public class Cerchio {
     return dim;
   }
 }
+*/
