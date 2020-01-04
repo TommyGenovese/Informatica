@@ -1,7 +1,12 @@
 import java.awt.;
 import processing.core.PApplet;
 public class Cerchio {
-    private float dim;                          //diametro cerchio...
+    private float dim;                          //diametro cerchio..
+    private final static int DIM_DEFAULT = 100;
+    private float cordX;  //coordinate del centro
+    private float cordY;
+    private color colore;  //colore riempimento
+    private color bordo;   //colore bordo
     private PApplet processing;                 //oggetto finestra in cui viene usato
 
     public Cerchio(PApplet processing){
@@ -24,3 +29,4 @@ public class Cerchio {
         if (dim >= 0) this.dim = dim;           //altrimenti lascia invariato
     }
 }
+
