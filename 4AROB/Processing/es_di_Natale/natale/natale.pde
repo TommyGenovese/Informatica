@@ -54,12 +54,12 @@ void draw() {
     
     
     //problema con il movimento della scritta e con il lag della neve
-    textFont(f, 80);
+    /*textFont(f, 80);
     fill(255);
     if(Xscritta>width/2){
       Xscritta= Xscritta - 1;
     }
     text("Buon Natale", Xscritta, Yscritta);
-    text("da New York!!", Xscritta, Yscritta+100);
+    text("da New York!!", Xscritta, Yscritta+100);*/
   }
 }

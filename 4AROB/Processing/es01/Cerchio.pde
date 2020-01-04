@@ -15,7 +15,7 @@ public void setup() {
 public void draw(){
     //creazione di un colore a caso
     //random restituisce un float [0..256)
-    c.setPosizione(float(random(width), random (height)))
+    c.setPosizione(float(random(height), random(width));
     c.setColore(color(random(256), random(256), random(256))); 
     c.show();  
     delay(100);
