@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="es_tastiera_jar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../es_tastiera/out/artifacts/es_tastiera_jar" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../es_tastiera/out/artifacts/es_tastiera_jar" recursive="false" />
+  </library>
+</component>
