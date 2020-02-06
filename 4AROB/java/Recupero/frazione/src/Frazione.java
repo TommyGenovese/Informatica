@@ -35,6 +35,7 @@ public class Frazione {
 
     public void setDenom(int denom) {
         if(denom==0){
+
             this.denom=1;
         }else{
             this.denom = denom;
