@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Prova</string>
+    <string name="saluta">Benvenuto!</string>
+    <string name="esempio1">Saluta</string>
+    <string name="esempio2">Gioco Alto e Basso</string>
+    <string name="titGioco">Alto e Basso</string>
+    <string name="inicazioniGioco">Inserisci un numero da 1 a 100</string>
+    <string name="digita">Digita il numero</string>
+    <string name="invio">Invio</string>
 </resources>

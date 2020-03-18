@@ -6,25 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tasto"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
+            <TextView
+                android:id="@+id/txtSaluta"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:height="50dp"
+                android:padding="15dp"
+                android:text="@string/saluta"
+                android:textAlignment="center"
+                android:textColor="@color/colorRed"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                />
+
+            <Button
+                android:id="@+id/btnSaluta"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:text="@string/esempio1" />
+
+            <Button
+                android:id="@+id/btnAltoBasso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/esempio2" />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
