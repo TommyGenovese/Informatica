@@ -39,7 +39,15 @@
                 android:id="@+id/btnAltoBasso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/esempio2" />
+                android:text="@string/esempio2"
+
+                />
+
+            <Button
+                android:id="@+id/btnAcc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/accell" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

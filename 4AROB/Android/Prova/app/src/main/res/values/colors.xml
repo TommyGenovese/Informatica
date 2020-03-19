@@ -6,4 +6,7 @@
     <color name="colorGreen">#62ff00</color>
     <color name="colorRed">#FF0000</color>
     <color name="colorLGray">#d2d4d2</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="black_overlay">#66000000</color>
 </resources>

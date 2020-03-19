@@ -3,8 +3,20 @@
     <string name="saluta">Benvenuto!</string>
     <string name="esempio1">Saluta</string>
     <string name="esempio2">Gioco Alto e Basso</string>
-    <string name="titGioco">Alto e Basso</string>
-    <string name="inicazioniGioco">Inserisci un numero da 1 a 100</string>
-    <string name="digita">Digita il numero</string>
-    <string name="invio">Invio</string>
+    <string name="accell">Accellerometro</string>
+
+    <!-- alto e basso -->
+    <string name="title_activity_alto_basso">Alto &amp; Basso</string>
+    <string name="dummy_button">Esci</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="inserisci_numero">Inserisci un numero da 0 a 100</string>
+    <string name="esito_numero">esito</string>
+
+
+    <!-- ACC ACTIVITY-->
+    <string name="titolo_acc">ACCELLEROMETRO</string>
+    <string name="sens_x">X</string>
+    <string name="sens_y">Y</string>
+    <string name="sens_z">Z</string>
+
 </resources>

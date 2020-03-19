@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private  static final String TAG= "Main Activity";
-    private Button btnSal, btnAltoBasso;
+    private Button btnSal, btnAltoBasso, btnAcc;
     private TextView txtS;
 
     @Override
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         btnSal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                txtS.setText("Benvenuto Tommaso!");
+                txtS.setText("Benvenuta Tiziana!");
             }
         });
 
@@ -42,6 +42,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Avvio una nuova activity per giocare ad Alto e Basso
                 Intent intent =  new Intent(MainActivity.this, AltoBassoActivity.class);
+                intent.putExtra("var", "valore");
+                startActivity(intent);
+            }
+        });
+
+        btnAcc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View w) {
+                //Avvio una nuova activity per visualizzare l'accellerometro
+                Intent intent =  new Intent(MainActivity.this, AccActivity.class);
                 intent.putExtra("var", "valore");
                 startActivity(intent);
             }
