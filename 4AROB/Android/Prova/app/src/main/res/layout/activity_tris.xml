@@ -55,21 +55,27 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:enabled="false"
-                    android:text="@string/lineOr" />
+                    android:text="@string/lineOr"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
 
                 <Button
                     android:id="@+id/btn01"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:enabled="false"
-                    android:text="@string/lineOr" />
+                    android:text="@string/lineOr"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
 
                 <Button
                     android:id="@+id/btn02"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:enabled="false"
-                    android:text="@string/lineOr" />
+                    android:text="@string/lineOr"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
             </TableRow>
 
             <TableRow
@@ -82,21 +88,27 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:enabled="false"
-                    android:text="@string/lineOr" />
+                    android:text="@string/lineOr"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
 
                 <Button
                     android:id="@+id/btn11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:enabled="false"
-                    android:text="@string/lineOr" />
+                    android:text="@string/lineOr"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
 
                 <Button
                     android:id="@+id/btn12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:enabled="false"
-                    android:text="@string/lineOr" />
+                    android:text="@string/lineOr"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
             </TableRow>
 
             <TableRow
@@ -109,21 +121,27 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:enabled="false"
-                    android:text="@string/lineOr" />
+                    android:text="@string/lineOr"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
 
                 <Button
                     android:id="@+id/btn21"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:enabled="false"
-                    android:text="@string/lineOr" />
+                    android:text="@string/lineOr"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
 
                 <Button
                     android:id="@+id/btn22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:enabled="false"
-                    android:text="@string/lineOr" />
+                    android:text="@string/lineOr"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
             </TableRow>
 
         </TableLayout>

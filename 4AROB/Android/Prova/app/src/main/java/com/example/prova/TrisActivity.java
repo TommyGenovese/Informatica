@@ -68,7 +68,6 @@ public class TrisActivity extends AppCompatActivity {
                             ||  (btn10.getText()=="O" && btn20.getText()=="O")
                             || (btn11.getText()=="O" && btn22.getText()=="O")){
 
-                        txtTurniTris.setText("il vincitore è "+ getIntent().getStringExtra("g1"));
                         txtTurniTris.setBackgroundResource(R.color.colorGreen);
                         btn01.setEnabled(false);
                         btn02.setEnabled(false);
@@ -269,7 +268,7 @@ public class TrisActivity extends AppCompatActivity {
             }
         });
 
-        
+
 
         //Bottone 22
         btn22.setOnClickListener(new View.OnClickListener() {
