@@ -1,5 +1,6 @@
 package com.example.prova;
 
+import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -55,7 +56,7 @@ public class TrisActivity extends AppCompatActivity {
 
         //Bottone 00
         btn00.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("ResourceAsColor")
+            @SuppressLint({"ResourceAsColor", "SetTextI18n"})
             @Override
             public void onClick(View v) {
                 if (num%2==0) {
@@ -69,6 +70,7 @@ public class TrisActivity extends AppCompatActivity {
                             || (btn11.getText()=="O" && btn22.getText()=="O")){
 
                         txtTurniTris.setBackgroundResource(R.color.colorGreen);
+                        txtTurniTris.setText("Ha vinto "+ getIntent().getStringExtra("g2"));
                         btn01.setEnabled(false);
                         btn02.setEnabled(false);
                         btn10.setEnabled(false);
@@ -86,9 +88,22 @@ public class TrisActivity extends AppCompatActivity {
                     num++;
                     btn00.setText("X");
                     btn00.setBackgroundResource(R.color.colorLRed);
-                    txtTurniTris.setBackgroundResource(R.color.colorLBlue);
-                    txtTurniTris.setText(getIntent().getStringExtra("g2"));
-                    btn00.setEnabled(false);
+                    if((btn01.getText()=="X" && btn02.getText()=="X") || (btn10.getText()=="X" && btn20.getText()=="X") || (btn11.getText()=="X" && btn22.getText()=="X")){
+                        txtTurniTris.setBackgroundResource(R.color.colorGreen);
+                        txtTurniTris.setText("Ha vinto "+ getIntent().getStringExtra("g1"));
+                        btn01.setEnabled(false);
+                        btn02.setEnabled(false);
+                        btn10.setEnabled(false);
+                        btn11.setEnabled(false);
+                        btn12.setEnabled(false);
+                        btn20.setEnabled(false);
+                        btn21.setEnabled(false);
+                        btn22.setEnabled(false);
+                    }else {
+                        txtTurniTris.setBackgroundResource(R.color.colorLBlue);
+                        txtTurniTris.setText(getIntent().getStringExtra("g2"));
+                        btn00.setEnabled(false);
+                    }
                 }
             }
         });
@@ -132,6 +147,7 @@ public class TrisActivity extends AppCompatActivity {
                     txtTurniTris.setBackgroundResource(R.color.colorLRed);
                     txtTurniTris.setText(getIntent().getStringExtra("g1"));
                     btn02.setEnabled(false);
+
                 }else{
                     num++;
                     btn02.setText("X");
