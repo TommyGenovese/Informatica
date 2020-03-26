@@ -7,6 +7,8 @@
     <color name="colorRed">#FF0000</color>
     <color name="colorLGray">#d2d4d2</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorLRed">#ff4f4f</color>
+    <color name="colorLBlue">#6167ff</color>
 
     <color name="black_overlay">#66000000</color>
 </resources>

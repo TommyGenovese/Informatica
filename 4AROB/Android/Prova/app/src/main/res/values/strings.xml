@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">Prova</string>
-    <string name="saluta">Benvenuto!</string>
+    <string name="app_name">First App</string>
+    <string name="saluta">My App</string>
     <string name="esempio1">Saluta</string>
     <string name="esempio2">Gioco Alto e Basso</string>
     <string name="accell">Accellerometro</string>
+    <string name="tris">Gioco del tris</string>
 
     <!-- alto e basso -->
     <string name="title_activity_alto_basso">Alto &amp; Basso</string>
@@ -18,5 +19,11 @@
     <string name="sens_x">X</string>
     <string name="sens_y">Y</string>
     <string name="sens_z">Z</string>
+
+    <!--TRIS ACTIVITY-->
+    <string name="lineOr">_</string>
+    <string name="titleTris">Tris</string>
+    <string name="turniTris"></string>
+    <string name="play">Play</string>
 
 </resources>

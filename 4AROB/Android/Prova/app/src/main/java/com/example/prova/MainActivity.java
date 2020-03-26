@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private  static final String TAG= "Main Activity";
-    private Button btnSal, btnAltoBasso, btnAcc;
+    private Button btnSal, btnAltoBasso, btnAcc, btnTris;
     private TextView txtS;
 
     @Override
@@ -27,13 +27,15 @@ public class MainActivity extends AppCompatActivity {
         btnSal = findViewById(R.id.btnSaluta);
         txtS = findViewById(R.id.txtSaluta);
         btnAltoBasso = findViewById(R.id.btnAltoBasso);
+        btnTris = findViewById(R.id.btnTris);
     }
 
     private void setupEventListener(){
         btnSal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                txtS.setText("Benvenuta Tiziana!");
+                txtS.setTextSize(24);
+                txtS.setText("Benvenuto sull'applicazione di Tommaso!");
             }
         });
 
@@ -47,12 +49,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnAcc.setOnClickListener(new View.OnClickListener() {
+        /*btnAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View w) {
                 //Avvio una nuova activity per visualizzare l'accellerometro
                 Intent intent =  new Intent(MainActivity.this, AccActivity.class);
-                intent.putExtra("var", "valore");
+                startActivity(intent);
+            }
+        });*/
+
+        btnTris.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View w) {
+                //Avvio una nuova activity per visualizzare l'accellerometro
+                Intent intent =  new Intent(MainActivity.this, TrisActivity.class);
+                intent.putExtra("g1", "Tommy");
+                intent.putExtra("g2", "Nico");
                 startActivity(intent);
             }
         });

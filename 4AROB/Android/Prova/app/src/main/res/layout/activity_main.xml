@@ -18,13 +18,13 @@
             <TextView
                 android:id="@+id/txtSaluta"
                 android:layout_width="match_parent"
-                android:layout_height="66dp"
+                android:layout_height="78dp"
                 android:height="50dp"
                 android:padding="15dp"
                 android:text="@string/saluta"
                 android:textAlignment="center"
                 android:textColor="@color/colorRed"
-                android:textSize="20sp"
+                android:textSize="30sp"
                 android:textStyle="bold"
 
                 />
@@ -32,7 +32,7 @@
             <Button
                 android:id="@+id/btnSaluta"
                 android:layout_width="match_parent"
-                android:layout_height="82dp"
+                android:layout_height="wrap_content"
                 android:text="@string/esempio1" />
 
             <Button
@@ -47,7 +47,13 @@
                 android:id="@+id/btnAcc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/accell" />
+                android:text="@string/accell"/>
+
+            <Button
+                android:id="@+id/btnTris"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tris" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

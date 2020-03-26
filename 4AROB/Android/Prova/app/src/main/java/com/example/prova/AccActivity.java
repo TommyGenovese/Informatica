@@ -68,3 +68,8 @@ public class AccActivity extends AppCompatActivity implements SensorEventListene
 
     }
 }
+
+
+
+
+
