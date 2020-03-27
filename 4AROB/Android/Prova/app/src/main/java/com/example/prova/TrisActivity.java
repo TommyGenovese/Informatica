@@ -65,9 +65,9 @@ public class TrisActivity extends AppCompatActivity {
                     btn00.setBackgroundResource(R.color.colorLBlue);
 
                     //controllo se ha fatto una serie di 3
-                    if((btn01.getText()=="O" && btn02.getText()=="O")
-                            ||  (btn10.getText()=="O" && btn20.getText()=="O")
-                            || (btn11.getText()=="O" && btn22.getText()=="O")){
+                    if((btn01.getText().equals("O") && btn02.getText().equals("O"))
+                            ||  (btn10.getText().equals("O") && btn20.getText().equals("O"))
+                            || (btn11.getText().equals("O") && btn22.getText().equals("O"))){
 
                         txtTurniTris.setBackgroundResource(R.color.colorGreen);
                         txtTurniTris.setText("Ha vinto "+ getIntent().getStringExtra("g2"));
@@ -88,7 +88,8 @@ public class TrisActivity extends AppCompatActivity {
                     num++;
                     btn00.setText("X");
                     btn00.setBackgroundResource(R.color.colorLRed);
-                    if((btn01.getText()=="X" && btn02.getText()=="X") || (btn10.getText()=="X" && btn20.getText()=="X") || (btn11.getText()=="X" && btn22.getText()=="X")){
+                    if((btn01.getText().equals("X") && btn02.getText().equals("X")) || (btn10.getText().equals("X") && btn20.getText().equals("X"))
+                            || (btn11.getText().equals("X") && btn22.getText().equals("X"))){
                         txtTurniTris.setBackgroundResource(R.color.colorGreen);
                         txtTurniTris.setText("Ha vinto "+ getIntent().getStringExtra("g1"));
                         btn01.setEnabled(false);
@@ -102,8 +103,9 @@ public class TrisActivity extends AppCompatActivity {
                     }else {
                         txtTurniTris.setBackgroundResource(R.color.colorLBlue);
                         txtTurniTris.setText(getIntent().getStringExtra("g2"));
-                        btn00.setEnabled(false);
+
                     }
+                    btn00.setEnabled(false);
                 }
             }
         });
@@ -118,16 +120,44 @@ public class TrisActivity extends AppCompatActivity {
                 if (num%2==0) {
                     num++;
                     btn01.setText("O");
-                    btn01.setBackgroundResource(R.color.colorLBlue);
-                    txtTurniTris.setBackgroundResource(R.color.colorLRed);
-                    txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    btn02.setBackgroundResource(R.color.colorLBlue);
+                    if((btn00.getText().equals("O") && btn02.getText().equals("O"))
+                            ||  (btn11.getText().equals("O") && btn21.getText().equals("O"))){
+
+                        txtTurniTris.setBackgroundResource(R.color.colorGreen);
+                        txtTurniTris.setText("Ha vinto "+ getIntent().getStringExtra("g2"));
+                        btn01.setEnabled(false);
+                        btn02.setEnabled(false);
+                        btn10.setEnabled(false);
+                        btn11.setEnabled(false);
+                        btn12.setEnabled(false);
+                        btn20.setEnabled(false);
+                        btn21.setEnabled(false);
+                        btn22.setEnabled(false);
+                    }else {
+                        txtTurniTris.setBackgroundResource(R.color.colorLRed);
+                        txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    }
                     btn01.setEnabled(false);
                 }else{
                     num++;
                     btn01.setText("X");
                     btn01.setBackgroundResource(R.color.colorLRed);
-                    txtTurniTris.setBackgroundResource(R.color.colorLBlue);
-                    txtTurniTris.setText(getIntent().getStringExtra("g2"));
+                    if((btn00.getText().equals("X") && btn02.getText().equals("X")) || (btn11.getText().equals("X") && btn21.getText().equals("X"))){
+                        txtTurniTris.setBackgroundResource(R.color.colorGreen);
+                        txtTurniTris.setText("Ha vinto "+ getIntent().getStringExtra("g1"));
+                        btn01.setEnabled(false);
+                        btn02.setEnabled(false);
+                        btn10.setEnabled(false);
+                        btn11.setEnabled(false);
+                        btn12.setEnabled(false);
+                        btn20.setEnabled(false);
+                        btn21.setEnabled(false);
+                        btn22.setEnabled(false);
+                    }else {
+                        txtTurniTris.setBackgroundResource(R.color.colorLBlue);
+                        txtTurniTris.setText(getIntent().getStringExtra("g2"));
+                    }
                     btn01.setEnabled(false);
                 }
             }
@@ -144,16 +174,47 @@ public class TrisActivity extends AppCompatActivity {
                     num++;
                     btn02.setText("O");
                     btn02.setBackgroundResource(R.color.colorLBlue);
-                    txtTurniTris.setBackgroundResource(R.color.colorLRed);
-                    txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    if((btn00.getText().equals("O") && btn01.getText().equals("O"))
+                            ||  (btn11.getText().equals("O") && btn20.getText().equals("O"))
+                            ||  (btn12.getText().equals("O") && btn22.getText().equals("O"))){
+
+                        txtTurniTris.setBackgroundResource(R.color.colorGreen);
+                        txtTurniTris.setText("Ha vinto "+ getIntent().getStringExtra("g2"));
+                        btn01.setEnabled(false);
+                        btn02.setEnabled(false);
+                        btn10.setEnabled(false);
+                        btn11.setEnabled(false);
+                        btn12.setEnabled(false);
+                        btn20.setEnabled(false);
+                        btn21.setEnabled(false);
+                        btn22.setEnabled(false);
+                    }else {
+                        txtTurniTris.setBackgroundResource(R.color.colorLRed);
+                        txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    }
                     btn02.setEnabled(false);
 
                 }else{
                     num++;
                     btn02.setText("X");
                     btn02.setBackgroundResource(R.color.colorLRed);
-                    txtTurniTris.setBackgroundResource(R.color.colorLBlue);
-                    txtTurniTris.setText(getIntent().getStringExtra("g2"));
+                    if((btn00.getText().equals("X") && btn01.getText().equals("X"))
+                            ||  (btn11.getText().equals("X") && btn20.getText().equals("X"))
+                            ||  (btn12.getText().equals("X") && btn22.getText().equals("X"))){
+                        txtTurniTris.setBackgroundResource(R.color.colorGreen);
+                        txtTurniTris.setText("Ha vinto "+ getIntent().getStringExtra("g1"));
+                        btn01.setEnabled(false);
+                        btn02.setEnabled(false);
+                        btn10.setEnabled(false);
+                        btn11.setEnabled(false);
+                        btn12.setEnabled(false);
+                        btn20.setEnabled(false);
+                        btn21.setEnabled(false);
+                        btn22.setEnabled(false);
+                    }else {
+                        txtTurniTris.setBackgroundResource(R.color.colorLBlue);
+                        txtTurniTris.setText(getIntent().getStringExtra("g2"));
+                    }
                     btn02.setEnabled(false);
                 }
             }
@@ -170,15 +231,44 @@ public class TrisActivity extends AppCompatActivity {
                     num++;
                     btn10.setText("O");
                     btn10.setBackgroundResource(R.color.colorLBlue);
-                    txtTurniTris.setBackgroundResource(R.color.colorLRed);
-                    txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    if((btn00.getText().equals("O") && btn20.getText().equals("O"))
+                            ||  (btn11.getText().equals("O") && btn12.getText().equals("O"))){
+
+                        txtTurniTris.setBackgroundResource(R.color.colorGreen);
+                        txtTurniTris.setText("Ha vinto "+ getIntent().getStringExtra("g2"));
+                        btn01.setEnabled(false);
+                        btn02.setEnabled(false);
+                        btn10.setEnabled(false);
+                        btn11.setEnabled(false);
+                        btn12.setEnabled(false);
+                        btn20.setEnabled(false);
+                        btn21.setEnabled(false);
+                        btn22.setEnabled(false);
+                    }else {
+                        txtTurniTris.setBackgroundResource(R.color.colorLRed);
+                        txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    }
                     btn10.setEnabled(false);
                 }else{
                     num++;
                     btn10.setText("X");
                     btn10.setBackgroundResource(R.color.colorLRed);
-                    txtTurniTris.setBackgroundResource(R.color.colorLBlue);
-                    txtTurniTris.setText(getIntent().getStringExtra("g2"));
+                    if((btn00.getText().equals("X") && btn20.getText().equals("X"))
+                            ||  (btn11.getText().equals("X") && btn12.getText().equals("X"))){
+                        txtTurniTris.setBackgroundResource(R.color.colorGreen);
+                        txtTurniTris.setText("Ha vinto "+ getIntent().getStringExtra("g1"));
+                        btn01.setEnabled(false);
+                        btn02.setEnabled(false);
+                        btn10.setEnabled(false);
+                        btn11.setEnabled(false);
+                        btn12.setEnabled(false);
+                        btn20.setEnabled(false);
+                        btn21.setEnabled(false);
+                        btn22.setEnabled(false);
+                    }else {
+                        txtTurniTris.setBackgroundResource(R.color.colorLBlue);
+                        txtTurniTris.setText(getIntent().getStringExtra("g2"));
+                    }
                     btn10.setEnabled(false);
                 }
             }
@@ -195,15 +285,49 @@ public class TrisActivity extends AppCompatActivity {
                     num++;
                     btn11.setText("O");
                     btn11.setBackgroundResource(R.color.colorLBlue);
-                    txtTurniTris.setBackgroundResource(R.color.colorLRed);
-                    txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    if((btn00.getText().equals("O") && btn22.getText().equals("O"))
+                            ||  (btn10.getText().equals("O") && btn12.getText().equals("O"))
+                            ||  (btn20.getText().equals("O") && btn02.getText().equals("O"))
+                            ||  (btn01.getText().equals("O") && btn21.getText().equals("O"))){
+
+                        txtTurniTris.setBackgroundResource(R.color.colorGreen);
+                        txtTurniTris.setText("Ha vinto "+ getIntent().getStringExtra("g2"));
+                        btn01.setEnabled(false);
+                        btn02.setEnabled(false);
+                        btn10.setEnabled(false);
+                        btn11.setEnabled(false);
+                        btn12.setEnabled(false);
+                        btn20.setEnabled(false);
+                        btn21.setEnabled(false);
+                        btn22.setEnabled(false);
+                    }else {
+                        txtTurniTris.setBackgroundResource(R.color.colorLRed);
+                        txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    }
                     btn11.setEnabled(false);
                 }else{
                     num++;
                     btn11.setText("X");
                     btn11.setBackgroundResource(R.color.colorLRed);
-                    txtTurniTris.setBackgroundResource(R.color.colorLBlue);
-                    txtTurniTris.setText(getIntent().getStringExtra("g2"));
+                    if((btn00.getText().equals("X") && btn22.getText().equals("X"))
+                            ||  (btn10.getText().equals("X") && btn12.getText().equals("X"))
+                            ||  (btn20.getText().equals("X") && btn02.getText().equals("X"))
+                            ||  (btn01.getText().equals("X") && btn21.getText().equals("X"))){
+
+                        txtTurniTris.setBackgroundResource(R.color.colorGreen);
+                        txtTurniTris.setText("Ha vinto "+ getIntent().getStringExtra("g2"));
+                        btn01.setEnabled(false);
+                        btn02.setEnabled(false);
+                        btn10.setEnabled(false);
+                        btn11.setEnabled(false);
+                        btn12.setEnabled(false);
+                        btn20.setEnabled(false);
+                        btn21.setEnabled(false);
+                        btn22.setEnabled(false);
+                    }else {
+                        txtTurniTris.setBackgroundResource(R.color.colorLRed);
+                        txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    }
                     btn11.setEnabled(false);
                 }
             }
@@ -220,15 +344,45 @@ public class TrisActivity extends AppCompatActivity {
                     num++;
                     btn12.setText("O");
                     btn12.setBackgroundResource(R.color.colorLBlue);
-                    txtTurniTris.setBackgroundResource(R.color.colorLRed);
-                    txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    if((btn02.getText().equals("O") && btn22.getText().equals("O"))
+                            ||  (btn10.getText().equals("O") && btn11.getText().equals("O"))){
+
+                        txtTurniTris.setBackgroundResource(R.color.colorGreen);
+                        txtTurniTris.setText("Ha vinto "+ getIntent().getStringExtra("g2"));
+                        btn01.setEnabled(false);
+                        btn02.setEnabled(false);
+                        btn10.setEnabled(false);
+                        btn11.setEnabled(false);
+                        btn12.setEnabled(false);
+                        btn20.setEnabled(false);
+                        btn21.setEnabled(false);
+                        btn22.setEnabled(false);
+                    }else {
+                        txtTurniTris.setBackgroundResource(R.color.colorLRed);
+                        txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    }
                     btn12.setEnabled(false);
                 }else{
                     num++;
                     btn12.setText("X");
                     btn12.setBackgroundResource(R.color.colorLRed);
-                    txtTurniTris.setBackgroundResource(R.color.colorLBlue);
-                    txtTurniTris.setText(getIntent().getStringExtra("g2"));
+                    if((btn02.getText().equals("X") && btn22.getText().equals("X"))
+                            ||  (btn10.getText().equals("X") && btn11.getText().equals("X"))){
+
+                        txtTurniTris.setBackgroundResource(R.color.colorGreen);
+                        txtTurniTris.setText("Ha vinto "+ getIntent().getStringExtra("g2"));
+                        btn01.setEnabled(false);
+                        btn02.setEnabled(false);
+                        btn10.setEnabled(false);
+                        btn11.setEnabled(false);
+                        btn12.setEnabled(false);
+                        btn20.setEnabled(false);
+                        btn21.setEnabled(false);
+                        btn22.setEnabled(false);
+                    }else {
+                        txtTurniTris.setBackgroundResource(R.color.colorLRed);
+                        txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    }
                     btn12.setEnabled(false);
                 }
             }
@@ -245,15 +399,47 @@ public class TrisActivity extends AppCompatActivity {
                     num++;
                     btn20.setText("O");
                     btn20.setBackgroundResource(R.color.colorLBlue);
-                    txtTurniTris.setBackgroundResource(R.color.colorLRed);
-                    txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    if((btn00.getText().equals("O") && btn10.getText().equals("O"))
+                            ||  (btn11.getText().equals("O") && btn02.getText().equals("O"))
+                            ||  (btn21.getText().equals("O") && btn22.getText().equals("O"))){
+
+                        txtTurniTris.setBackgroundResource(R.color.colorGreen);
+                        txtTurniTris.setText("Ha vinto "+ getIntent().getStringExtra("g2"));
+                        btn01.setEnabled(false);
+                        btn02.setEnabled(false);
+                        btn10.setEnabled(false);
+                        btn11.setEnabled(false);
+                        btn12.setEnabled(false);
+                        btn20.setEnabled(false);
+                        btn21.setEnabled(false);
+                        btn22.setEnabled(false);
+                    }else {
+                        txtTurniTris.setBackgroundResource(R.color.colorLRed);
+                        txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    }
                     btn20.setEnabled(false);
                 }else{
                     num++;
                     btn20.setText("X");
                     btn20.setBackgroundResource(R.color.colorLRed);
-                    txtTurniTris.setBackgroundResource(R.color.colorLBlue);
-                    txtTurniTris.setText(getIntent().getStringExtra("g2"));
+                    if((btn00.getText().equals("X") && btn10.getText().equals("X"))
+                            ||  (btn11.getText().equals("X") && btn02.getText().equals("X"))
+                            ||  (btn21.getText().equals("X") && btn12.getText().equals("X"))){
+
+                        txtTurniTris.setBackgroundResource(R.color.colorGreen);
+                        txtTurniTris.setText("Ha vinto "+ getIntent().getStringExtra("g2"));
+                        btn01.setEnabled(false);
+                        btn02.setEnabled(false);
+                        btn10.setEnabled(false);
+                        btn11.setEnabled(false);
+                        btn12.setEnabled(false);
+                        btn20.setEnabled(false);
+                        btn21.setEnabled(false);
+                        btn22.setEnabled(false);
+                    }else {
+                        txtTurniTris.setBackgroundResource(R.color.colorLRed);
+                        txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    }
                     btn20.setEnabled(false);
                 }
             }
@@ -270,15 +456,45 @@ public class TrisActivity extends AppCompatActivity {
                     num++;
                     btn21.setText("O");
                     btn21.setBackgroundResource(R.color.colorLBlue);
-                    txtTurniTris.setBackgroundResource(R.color.colorLRed);
-                    txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    if((btn01.getText().equals("O") && btn11.getText().equals("O"))
+                            ||  (btn20.getText().equals("O") && btn22.getText().equals("O"))){
+
+                        txtTurniTris.setBackgroundResource(R.color.colorGreen);
+                        txtTurniTris.setText("Ha vinto "+ getIntent().getStringExtra("g2"));
+                        btn01.setEnabled(false);
+                        btn02.setEnabled(false);
+                        btn10.setEnabled(false);
+                        btn11.setEnabled(false);
+                        btn12.setEnabled(false);
+                        btn20.setEnabled(false);
+                        btn21.setEnabled(false);
+                        btn22.setEnabled(false);
+                    }else {
+                        txtTurniTris.setBackgroundResource(R.color.colorLRed);
+                        txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    }
                     btn21.setEnabled(false);
                 }else{
                     num++;
                     btn21.setText("X");
                     btn21.setBackgroundResource(R.color.colorLRed);
-                    txtTurniTris.setBackgroundResource(R.color.colorLBlue);
-                    txtTurniTris.setText(getIntent().getStringExtra("g2"));
+                    if((btn01.getText().equals("X") && btn11.getText().equals("X"))
+                            ||  (btn20.getText().equals("X") && btn22.getText().equals("X"))){
+
+                        txtTurniTris.setBackgroundResource(R.color.colorGreen);
+                        txtTurniTris.setText("Ha vinto "+ getIntent().getStringExtra("g2"));
+                        btn01.setEnabled(false);
+                        btn02.setEnabled(false);
+                        btn10.setEnabled(false);
+                        btn11.setEnabled(false);
+                        btn12.setEnabled(false);
+                        btn20.setEnabled(false);
+                        btn21.setEnabled(false);
+                        btn22.setEnabled(false);
+                    }else {
+                        txtTurniTris.setBackgroundResource(R.color.colorLRed);
+                        txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    }
                     btn21.setEnabled(false);
                 }
             }
@@ -295,15 +511,47 @@ public class TrisActivity extends AppCompatActivity {
                     num++;
                     btn22.setText("O");
                     btn22.setBackgroundResource(R.color.colorLBlue);
-                    txtTurniTris.setBackgroundResource(R.color.colorLRed);
-                    txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    if((btn00.getText().equals("O") && btn11.getText().equals("O"))
+                            ||  (btn02.getText().equals("O") && btn12.getText().equals("O"))
+                            ||  (btn20.getText().equals("O") && btn21.getText().equals("O"))){
+
+                        txtTurniTris.setBackgroundResource(R.color.colorGreen);
+                        txtTurniTris.setText("Ha vinto "+ getIntent().getStringExtra("g2"));
+                        btn01.setEnabled(false);
+                        btn02.setEnabled(false);
+                        btn10.setEnabled(false);
+                        btn11.setEnabled(false);
+                        btn12.setEnabled(false);
+                        btn20.setEnabled(false);
+                        btn21.setEnabled(false);
+                        btn22.setEnabled(false);
+                    }else {
+                        txtTurniTris.setBackgroundResource(R.color.colorLRed);
+                        txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    }
                     btn22.setEnabled(false);
                 }else{
                     num++;
                     btn22.setText("X");
                     btn22.setBackgroundResource(R.color.colorLRed);
-                    txtTurniTris.setBackgroundResource(R.color.colorLBlue);
-                    txtTurniTris.setText(getIntent().getStringExtra("g2"));
+                    if((btn02.getText().equals("X") && btn12.getText().equals("X"))
+                            ||  (btn00.getText().equals("X") && btn11.getText().equals("X"))
+                            ||  (btn20.getText().equals("X") && btn21.getText().equals("X"))){
+
+                        txtTurniTris.setBackgroundResource(R.color.colorGreen);
+                        txtTurniTris.setText("Ha vinto "+ getIntent().getStringExtra("g2"));
+                        btn01.setEnabled(false);
+                        btn02.setEnabled(false);
+                        btn10.setEnabled(false);
+                        btn11.setEnabled(false);
+                        btn12.setEnabled(false);
+                        btn20.setEnabled(false);
+                        btn21.setEnabled(false);
+                        btn22.setEnabled(false);
+                    }else {
+                        txtTurniTris.setBackgroundResource(R.color.colorLRed);
+                        txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                    }
                     btn22.setEnabled(false);
                 }
             }
