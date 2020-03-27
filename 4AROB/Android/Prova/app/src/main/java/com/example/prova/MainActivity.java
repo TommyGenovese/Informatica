@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View w) {
                 //Avvio una nuova activity per visualizzare l'accellerometro
                 Intent intent =  new Intent(MainActivity.this, TrisActivity.class);
-                intent.putExtra("g1", "Tommy");
-                intent.putExtra("g2", "Nico");
+                intent.putExtra("g1", "Giocatore 1");
+                intent.putExtra("g2", "Giocatore 2");
                 startActivity(intent);
             }
         });

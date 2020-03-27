@@ -120,7 +120,7 @@ public class TrisActivity extends AppCompatActivity {
                 if (num%2==0) {
                     num++;
                     btn01.setText("O");
-                    btn02.setBackgroundResource(R.color.colorLBlue);
+                    btn01.setBackgroundResource(R.color.colorLBlue);
                     if((btn00.getText().equals("O") && btn02.getText().equals("O"))
                             ||  (btn11.getText().equals("O") && btn21.getText().equals("O"))){
 
