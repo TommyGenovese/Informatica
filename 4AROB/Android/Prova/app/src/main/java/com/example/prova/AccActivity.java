@@ -20,7 +20,7 @@ public class AccActivity extends AppCompatActivity implements SensorEventListene
     private Button btnEsci;
 
     private SensorManager sensorManager;
-    private Sensor accellerometro;
+    private Sensor accelerometro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,10 +43,11 @@ public class AccActivity extends AppCompatActivity implements SensorEventListene
         });
 
         //attivazione e collegamento sensore
-        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        accellerometro = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE); // init del Gestore dei sensori
+        accelerometro = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER); // specifico che l'oggetto sensore andrà a gestire il sensore Accelerometro
 
-        sensorManager.registerListener((SensorEventListener) this, accellerometro, SensorManager.SENSOR_DELAY_NORMAL);
+        // Registrazione Listener per sensore specifico
+        sensorManager.registerListener((SensorEventListener) this, accelerometro, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     @Override

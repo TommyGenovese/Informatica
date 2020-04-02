@@ -20,6 +20,7 @@ public class TrisActivity extends AppCompatActivity {
     private Button btnPlay;
     private TextView txtTurniTris;
     private int num = 1;
+    private boolean win = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +80,7 @@ public class TrisActivity extends AppCompatActivity {
                         btn20.setEnabled(false);
                         btn21.setEnabled(false);
                         btn22.setEnabled(false);
+                        win=true;
                     }else {
                         txtTurniTris.setBackgroundResource(R.color.colorLRed);
                         txtTurniTris.setText(getIntent().getStringExtra("g1"));
@@ -100,12 +102,16 @@ public class TrisActivity extends AppCompatActivity {
                         btn20.setEnabled(false);
                         btn21.setEnabled(false);
                         btn22.setEnabled(false);
+                        win=true;
                     }else {
                         txtTurniTris.setBackgroundResource(R.color.colorLBlue);
                         txtTurniTris.setText(getIntent().getStringExtra("g2"));
-
                     }
                     btn00.setEnabled(false);
+                }
+                if(num==10 && win==false){
+                    txtTurniTris.setBackgroundResource(R.color.colorLYel);
+                    txtTurniTris.setText("Pareggio!");
                 }
             }
         });
@@ -134,6 +140,7 @@ public class TrisActivity extends AppCompatActivity {
                         btn20.setEnabled(false);
                         btn21.setEnabled(false);
                         btn22.setEnabled(false);
+                        win=true;
                     }else {
                         txtTurniTris.setBackgroundResource(R.color.colorLRed);
                         txtTurniTris.setText(getIntent().getStringExtra("g1"));
@@ -154,11 +161,16 @@ public class TrisActivity extends AppCompatActivity {
                         btn20.setEnabled(false);
                         btn21.setEnabled(false);
                         btn22.setEnabled(false);
+                        win=true;
                     }else {
                         txtTurniTris.setBackgroundResource(R.color.colorLBlue);
                         txtTurniTris.setText(getIntent().getStringExtra("g2"));
                     }
                     btn01.setEnabled(false);
+                }
+                if(num==10 && win==false){
+                    txtTurniTris.setBackgroundResource(R.color.colorLYel);
+                    txtTurniTris.setText("Pareggio!");
                 }
             }
         });
@@ -188,6 +200,7 @@ public class TrisActivity extends AppCompatActivity {
                         btn20.setEnabled(false);
                         btn21.setEnabled(false);
                         btn22.setEnabled(false);
+                        win=true;
                     }else {
                         txtTurniTris.setBackgroundResource(R.color.colorLRed);
                         txtTurniTris.setText(getIntent().getStringExtra("g1"));
@@ -211,11 +224,16 @@ public class TrisActivity extends AppCompatActivity {
                         btn20.setEnabled(false);
                         btn21.setEnabled(false);
                         btn22.setEnabled(false);
+                        win=true;
                     }else {
                         txtTurniTris.setBackgroundResource(R.color.colorLBlue);
                         txtTurniTris.setText(getIntent().getStringExtra("g2"));
                     }
                     btn02.setEnabled(false);
+                }
+                if(num==10 && win==false){
+                    txtTurniTris.setBackgroundResource(R.color.colorLYel);
+                    txtTurniTris.setText("Pareggio!");
                 }
             }
         });
@@ -244,6 +262,7 @@ public class TrisActivity extends AppCompatActivity {
                         btn20.setEnabled(false);
                         btn21.setEnabled(false);
                         btn22.setEnabled(false);
+                        win=true;
                     }else {
                         txtTurniTris.setBackgroundResource(R.color.colorLRed);
                         txtTurniTris.setText(getIntent().getStringExtra("g1"));
@@ -265,11 +284,16 @@ public class TrisActivity extends AppCompatActivity {
                         btn20.setEnabled(false);
                         btn21.setEnabled(false);
                         btn22.setEnabled(false);
+                        win=true;
                     }else {
                         txtTurniTris.setBackgroundResource(R.color.colorLBlue);
                         txtTurniTris.setText(getIntent().getStringExtra("g2"));
                     }
                     btn10.setEnabled(false);
+                }
+                if(num==10 && win==false){
+                    txtTurniTris.setBackgroundResource(R.color.colorLYel);
+                    txtTurniTris.setText("Pareggio!");
                 }
             }
         });
@@ -300,6 +324,7 @@ public class TrisActivity extends AppCompatActivity {
                         btn20.setEnabled(false);
                         btn21.setEnabled(false);
                         btn22.setEnabled(false);
+                        win=true;
                     }else {
                         txtTurniTris.setBackgroundResource(R.color.colorLRed);
                         txtTurniTris.setText(getIntent().getStringExtra("g1"));
@@ -324,11 +349,16 @@ public class TrisActivity extends AppCompatActivity {
                         btn20.setEnabled(false);
                         btn21.setEnabled(false);
                         btn22.setEnabled(false);
+                        win=true;
                     }else {
-                        txtTurniTris.setBackgroundResource(R.color.colorLRed);
-                        txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                        txtTurniTris.setBackgroundResource(R.color.colorLBlue);
+                        txtTurniTris.setText(getIntent().getStringExtra("g2"));
                     }
                     btn11.setEnabled(false);
+                }
+                if(num==10 && win==false){
+                    txtTurniTris.setBackgroundResource(R.color.colorLYel);
+                    txtTurniTris.setText("Pareggio!");
                 }
             }
         });
@@ -357,6 +387,7 @@ public class TrisActivity extends AppCompatActivity {
                         btn20.setEnabled(false);
                         btn21.setEnabled(false);
                         btn22.setEnabled(false);
+                        win=true;
                     }else {
                         txtTurniTris.setBackgroundResource(R.color.colorLRed);
                         txtTurniTris.setText(getIntent().getStringExtra("g1"));
@@ -379,11 +410,16 @@ public class TrisActivity extends AppCompatActivity {
                         btn20.setEnabled(false);
                         btn21.setEnabled(false);
                         btn22.setEnabled(false);
+                        win=true;
                     }else {
-                        txtTurniTris.setBackgroundResource(R.color.colorLRed);
-                        txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                        txtTurniTris.setBackgroundResource(R.color.colorLBlue);
+                        txtTurniTris.setText(getIntent().getStringExtra("g2"));
                     }
                     btn12.setEnabled(false);
+                }
+                if(num==10 && win==false){
+                    txtTurniTris.setBackgroundResource(R.color.colorLYel);
+                    txtTurniTris.setText("Pareggio!");
                 }
             }
         });
@@ -413,6 +449,7 @@ public class TrisActivity extends AppCompatActivity {
                         btn20.setEnabled(false);
                         btn21.setEnabled(false);
                         btn22.setEnabled(false);
+                        win=true;
                     }else {
                         txtTurniTris.setBackgroundResource(R.color.colorLRed);
                         txtTurniTris.setText(getIntent().getStringExtra("g1"));
@@ -436,11 +473,16 @@ public class TrisActivity extends AppCompatActivity {
                         btn20.setEnabled(false);
                         btn21.setEnabled(false);
                         btn22.setEnabled(false);
+                        win=true;
                     }else {
-                        txtTurniTris.setBackgroundResource(R.color.colorLRed);
-                        txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                        txtTurniTris.setBackgroundResource(R.color.colorLBlue);
+                        txtTurniTris.setText(getIntent().getStringExtra("g2"));
                     }
                     btn20.setEnabled(false);
+                }
+                if(num==10 && win==false){
+                    txtTurniTris.setBackgroundResource(R.color.colorLYel);
+                    txtTurniTris.setText("Pareggio!");
                 }
             }
         });
@@ -469,6 +511,7 @@ public class TrisActivity extends AppCompatActivity {
                         btn20.setEnabled(false);
                         btn21.setEnabled(false);
                         btn22.setEnabled(false);
+                        win=true;
                     }else {
                         txtTurniTris.setBackgroundResource(R.color.colorLRed);
                         txtTurniTris.setText(getIntent().getStringExtra("g1"));
@@ -491,11 +534,16 @@ public class TrisActivity extends AppCompatActivity {
                         btn20.setEnabled(false);
                         btn21.setEnabled(false);
                         btn22.setEnabled(false);
+                        win=true;
                     }else {
-                        txtTurniTris.setBackgroundResource(R.color.colorLRed);
-                        txtTurniTris.setText(getIntent().getStringExtra("g1"));
+                        txtTurniTris.setBackgroundResource(R.color.colorLBlue);
+                        txtTurniTris.setText(getIntent().getStringExtra("g2"));
                     }
                     btn21.setEnabled(false);
+                }
+                if(num==10 && win==false){
+                    txtTurniTris.setBackgroundResource(R.color.colorLYel);
+                    txtTurniTris.setText("Pareggio!");
                 }
             }
         });
@@ -525,6 +573,7 @@ public class TrisActivity extends AppCompatActivity {
                         btn20.setEnabled(false);
                         btn21.setEnabled(false);
                         btn22.setEnabled(false);
+                        win=true;
                     }else {
                         txtTurniTris.setBackgroundResource(R.color.colorLRed);
                         txtTurniTris.setText(getIntent().getStringExtra("g1"));
@@ -548,16 +597,19 @@ public class TrisActivity extends AppCompatActivity {
                         btn20.setEnabled(false);
                         btn21.setEnabled(false);
                         btn22.setEnabled(false);
+                        win=true;
                     }else {
                         txtTurniTris.setBackgroundResource(R.color.colorLRed);
                         txtTurniTris.setText(getIntent().getStringExtra("g1"));
                     }
                     btn22.setEnabled(false);
                 }
+                if(num==10 && win==false) {
+                    txtTurniTris.setBackgroundResource(R.color.colorLYel);
+                    txtTurniTris.setText("Pareggio!");
+                }
             }
         });
-
-
     }
 
     private void bindComponent(){

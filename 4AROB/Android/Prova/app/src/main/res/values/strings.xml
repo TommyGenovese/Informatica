@@ -5,6 +5,7 @@
     <string name="esempio2">Gioco Alto e Basso</string>
     <string name="accell">Accellerometro</string>
     <string name="tris">Gioco del tris</string>
+    <string name="camera">Fotocamera</string>
 
     <!-- alto e basso -->
     <string name="title_activity_alto_basso">Alto &amp; Basso</string>
@@ -25,5 +26,10 @@
     <string name="titleTris">Tris</string>
     <string name="turniTris"></string>
     <string name="play">Play</string>
+
+    <string name="title_activity_cam">CamActivity</string>
+
+    <!--Fotocamera Activity-->
+
 
 </resources>

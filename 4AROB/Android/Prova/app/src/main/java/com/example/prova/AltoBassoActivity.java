@@ -140,6 +140,7 @@ public class AltoBassoActivity extends AppCompatActivity {
                         txtEsito.setText("Basso");
                     }else{
                         txtEsito.setText("Indovinato con "+ n_tentativi + ((n_tentativi>1)? " tentativi" : " tentativo"));
+                        txtN.setEnabled(false);
                     }
                     txtN.setText("");
                 }

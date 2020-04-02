@@ -9,6 +9,8 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorLRed">#ff4f4f</color>
     <color name="colorLBlue">#6167ff</color>
+    <color name="colorLYel">#ffff66</color>
+    <color name="colorYellow">#fff000</color>
 
     <color name="black_overlay">#66000000</color>
 </resources>
