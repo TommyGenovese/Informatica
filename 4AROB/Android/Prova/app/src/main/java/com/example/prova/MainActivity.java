@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private  static final String TAG= "Main Activity";
-    private Button btnSal, btnAltoBasso, btnAcc, btnTris;
+    private Button btnSal, btnAltoBasso, btnAcc, btnTris, btnForza;
     private TextView txtS;
 
     @Override
@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         txtS = findViewById(R.id.txtSaluta);
         btnAltoBasso = findViewById(R.id.btnAltoBasso);
         btnTris = findViewById(R.id.btnTris);
+        btnForza = findViewById(R.id.btnForza);
     }
 
     private void setupEventListener(){
@@ -68,6 +69,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnForza.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TrisActivity.class);
+                intent.putExtra("g1", "giocatore 1");
+                intent.putExtra("g1", "giocatore 2");
+                startActivity(intent);
+            }
+        });
+
 
     }
 }

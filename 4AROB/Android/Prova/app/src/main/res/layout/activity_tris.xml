@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:height="50dp"
             android:padding="15dp"
-            android:text="@string/turniTris" />
+            android:text="@string/turni" />
 
         <Button
             android:id="@+id/btnPlay"

@@ -5,6 +5,7 @@
     <string name="esempio2">Gioco Alto e Basso</string>
     <string name="accell">Accellerometro</string>
     <string name="tris">Gioco del tris</string>
+    <string name="forza4">Gioco forza 4</string>
     <string name="camera">Fotocamera</string>
 
     <!-- alto e basso -->
@@ -24,12 +25,13 @@
     <!--TRIS ACTIVITY-->
     <string name="lineOr">_</string>
     <string name="titleTris">Tris</string>
-    <string name="turniTris"></string>
+    <string name="turni">Turno di</string>
     <string name="play">Play</string>
+    <string name="reset">Reset Gioco</string>
 
     <string name="title_activity_cam">CamActivity</string>
 
-    <!--Fotocamera Activity-->
-
+    <!--Forza 4 Activity-->
+    <string name="forza">Forza 4</string>
 
 </resources>

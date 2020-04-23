@@ -56,6 +56,12 @@
                 android:layout_height="wrap_content"
                 android:text="@string/tris" />
 
+            <Button
+                android:id="@+id/btnForza"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/forza4" />
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
