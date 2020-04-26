@@ -1,0 +1,6 @@
+public enum TipoEsito {
+    PUò_ANDARE,
+    MERCE_CON_DAZIO,
+    MERCE_TRATTENUTA,
+    PASSEGGERO_TRATTENUTO,
+}
