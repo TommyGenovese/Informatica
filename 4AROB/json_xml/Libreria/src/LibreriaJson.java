@@ -1,3 +1,4 @@
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,11 +10,11 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class LibreriaJson {
-    static Vector<Libro> libri;
+    static Vector<Libro> libreria;
 
 
     public LibreriaJson(){
-        libri = new Vector<Libro>();
+        libreria = new Vector<Libro>();
     }
 
 
@@ -39,7 +40,8 @@ public class LibreriaJson {
         }
     }
 
-    private static void parseOgbjectLibro(JSONObject l)    {
+    private static void parseOgbjectLibro(JSONObject l)
+    {
         String nomeAutore;
         String cognomeAutore;
         String titolo;
@@ -53,14 +55,14 @@ public class LibreriaJson {
         titolo = (String) libro.get("titolo");
         pagineLibro =Integer.parseInt((String) libro.get("numero pagine"));
 
-        libri.add(new Libro(titolo, new Autore(nomeAutore,cognomeAutore), pagineLibro));
+        libreria.add(new Libro(titolo, new Autore(nomeAutore,cognomeAutore), pagineLibro));
     }
 
     @Override
     public String toString() {
         String out = "";
-        for(int i=0; i<libri.size(); i++){
-
+        for (int i =0; i<libreria.size();i++){
+            out += libreria.elementAt(i).toString() + "\n";
         }
         return out;
     }

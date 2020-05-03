@@ -10,6 +10,7 @@ public class Libro {
         this.autore = autore;
         this.numeroPagine = numeroPagine;
     }
+
     public static void setCostoPagina(double costo) {
         costoPagina = costo;
     }
@@ -26,7 +27,7 @@ public class Libro {
         return titolo;
     }
 
-     public Autore getAutore() {
+    public Autore getAutore() {
         return autore;
     }
 
@@ -41,8 +42,8 @@ public class Libro {
 
     @Override
     public String toString() {
-        return "\n\t'" + titolo + "' di " + autore +
+        return "'" + titolo + "' di " + autore +
                 ", numeroPagine=" + numeroPagine +
-                ", prezzo=" + getPrezzo();
+                ", prezzo=" + getPrezzo() + "\n";
     }
 }
