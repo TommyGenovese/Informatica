@@ -2,8 +2,6 @@
   <library name="java-json">
     <CLASSES />
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$PROJECT_DIR$/../librerie/java-json.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>

@@ -1,7 +1,19 @@
+/**
+ * Questa classe Test viene usata per Scrivere sul file.json
+ *
+ * @see Libreria
+ *
+ * @author Genovese Tommaso, Bruno Luca, Cuniberti Andrea, Bagnis Gabriele
+ * @version 2.0
+ */
 public class Test {
+    /**
+     *
+     * @param args
+     */
     public static void main (String[] args){
         //nome del file in cui andare a salvare
-        String nomefile = "libri.est";
+        String nomefile = "libri.json";
         //est sarà = .bin per chi utilizza il file di byte
         //         = .json
         //         = .csv
@@ -21,7 +33,7 @@ public class Test {
         System.out.println(libreria);
 
         // salvataggio libreria su file METODO DA IMPLEMENTARE
-        libreria.salvaLibreria ("libreria.json");
+        libreria.salvaLibreria (nomefile);
 
    }
 }

@@ -189,6 +189,7 @@ public class PratoActivity extends AppCompatActivity {
 
         }
 
+        @SuppressLint("ResourceAsColor")
         void controllaTasto(int x, int y){
             if(mat[x][y] == -1){
                 perso();
