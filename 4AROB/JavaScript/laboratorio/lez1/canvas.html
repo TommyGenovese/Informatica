@@ -1,0 +1,45 @@
+<!--come creare una serie di canvas e inserirci figure geometriche-->
+
+<!doctype html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <canvas id="CNV" width="300" height="200" style="border: 2px solid #250081;"></canvas>
+        <canvas id="CNV2" width="300" height="200" style="border: 2px solid #250081;"></canvas>
+        <canvas id="CNV3" width="300" height="200" style="border: 2px solid #250081;"/>
+
+
+        <script type="text/javascript">
+            data = new Array(5, 7, 3, 8, 1)
+                window.onload = disegna1
+                var incremento = 20
+
+                var graf1 = CNV2.getContext("2d");
+                graf1.moveTo(20, 0)
+                graf1.lineTo(20, 200)
+                graf1.moveTo(0, 180)
+                graf1.lineTo(300, 180)
+                graf1.moveTo(20,180)
+                graf1.stroke()
+
+                for(i=1; i<=data.length; i++){
+                    disegna1(i)
+                }
+
+                function disegna1(i){
+                    //graf.moveTo(i*40, 180)
+                    graf1.lineTo(i*incremento, data[i-1])//*incremento)
+
+                    graf1.stroke()
+                    //graf.strokeStyle = "yellow"
+                    //graf1.fillStyle = "red"
+                    //graf.strokeRect(i*40, 180-dati[i-1]*20, 150, dati[i-1]*20);
+                    //graf.stroke()
+                    ////graf1.fill();
+                }
+
+        </script>
+    </body>
+</html>

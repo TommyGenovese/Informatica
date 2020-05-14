@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <canvas id="CNV" width="300" height="200" style="border: 2px solid #250081;"></canvas>
+        <br>
+        <canvas id="CNV2" width="300" height="200" style="border: 2px solid #250081;"></canvas>
+        <br>
+        <input type="button" value="sposta x" id="SPOSTAX"/>
+        <input type="button" value="sposta y" id="SPOSTAY"/>
+        <input type="button" value="scala" id="SCALA"/>
+        <input type="button" value="ruota" id="RUOTA"/>
+
+        <script type="text/javascript">
+            var ctx = CNV.getContext("2d");
+            ctx.moveTo(100,50)
+            ctx.lineTo(100,150)
+            ctx.lineTo(200,150)
+            ctx.lineTo(100,50)
+            ctx.stroke()
+
+            ctx.fillStyle = "green";
+            ctx.fill();
+            ctx.strokeStyle = "blue";
+            ctx.stroke();
+
+            var ctx2 = CNV2.getContext("2d");
+            window.onload = disegna;
+
+            function disegna(){
+                ctx2.beginPath();
+                ctx2.moveTo(0,0);
+                ctx2.lineTo(0,100);
+                ctx2.lineTo(100,100);
+                ctx2.lineTo(0,0);
+                ctx2.fillStyle= "yellow"
+                ctx2.fill();
+                ctx2.strokeStyle = "blue"
+                ctx2.stroke();
+            }
+
+            SPOSTAX.addEventListener("click", function(){
+                ctx2.clearRect(-1,-1,CNV2.width, CNV2.height);
+                ctx2.translate(10, 0);
+                disegna();
+            });
+            SPOSTAY.addEventListener("click", function(){
+                ctx2.clearRect(-1,-1,CNV2.width, CNV2.height);
+                ctx2.translate(0, 10);
+                disegna();
+            });
+            SCALA.addEventListener("click", function(){
+                ctx2.clearRect(-1,-1,CNV2.width, CNV2.height);
+                ctx2.scale(1.1,1.1);
+                disegna();
+            });
+            RUOTA.addEventListener("click", function(){
+                ctx2.clearRect(-1,-1,CNV2.width, CNV2.height);
+                ctx2.rotate(Math.PI/6);
+                disegna();
+            });
+
+        </script>
+    </body>
+</html>

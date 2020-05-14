@@ -1,0 +1,86 @@
+<!--Tracciare un grafico cartesiano xy usando l'elemento HTML5 canvas,
+    dopo aver preventivamente caricato i dati in un vettore.
+    Se è possibile disegnare un grafico a barre, sarà possibile 
+    disegnare anche un grafico cartesiano xy.-->
+
+<!--Disegnare un grafico a barre sul canvas usando come base
+    di dati una seriazione numerica contenuta in un array.-->
+<!doctype html>
+<html>
+    <head></head>
+    <body>
+        <canvas id="CNV" width="300" height="200" style="border: 2px solid #250081;"></canvas>
+        <br>
+        <canvas id="CNV2" width="300" height="200" style="border: 2px solid #250081;"></canvas>
+        <br>
+        <script type="text/javascript">
+            window.onload = es1;
+            es1();
+            window.onload = es2;
+            es2();
+
+            function es1(){
+                dati = new Array(5, 7, 3, 8, 1);
+                window.onload = disegna;
+
+                var graf = CNV.getContext("2d");
+                graf.moveTo(20, 0)
+                graf.lineTo(20, 200)
+                graf.moveTo(0, 180)
+                graf.lineTo(300, 180)
+                graf.stroke();
+
+                for(i=1; i<=dati.length; i++){
+                    disegna(i);
+                }
+
+                function disegna(i){
+                    //graf.moveTo(i*40, 180)
+                    graf.beginPath();
+                    //graf.strokeStyle = "yellow"
+                    graf.fillStyle = "red"
+                    
+                    //graf.strokeRect(i*40, 180-dati[i-1]*20, 150, dati[i-1]*20);
+                    //graf.stroke()
+                    graf.fillRect(i*40, 180-dati[i-1]*20, 20, dati[i-1]*20)
+                    graf.fill();
+                }
+            }
+
+            function es2(){
+                data = new Array(5, 7, 3, 8, 1)
+                window.onload = disegna1
+
+                //linea del grafico(asse Y e asse X)
+                var graf1 = CNV2.getContext("2d");
+
+                //linea dei dati
+                var linea = CNV2.getContext("2d");
+                graf1.moveTo(20, 0)
+                graf1.lineTo(20, 200)
+                graf1.moveTo(0, 180)
+                graf1.lineTo(300, 180)                
+                graf1.stroke()
+                graf1.strokeStyle = "blue"
+                linea.moveTo(20,180)
+
+                for(i=1; i<=data.length; i++){
+                    disegna1(i)
+                }
+
+                function disegna1(i){
+                    //graf1.beginPath()
+                    //graf.moveTo(i*40, 180)
+                    linea.lineTo(i*40, 180-data[i-1]*20)
+
+                    linea.stroke()
+                    linea.strokeStyle = "red"
+                    
+                    //graf.strokeRect(i*40, 180-dati[i-1]*20, 150, dati[i-1]*20);
+                    //graf.stroke()
+                    ////graf1.fill();
+                }
+            }
+        </script>
+    </body>
+</html>
