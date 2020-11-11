@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Apri file</title>
+	<script src="Termometro.js"></script>
+</head>
+ <body>
+    <h1>
+      Input file
+    </h1>
+<input id="fileSelector" multiple type="file" onchange="pullfiles()">
+
+</body>
+
+<script>
+
+function pullfiles(){ 
+	let s = "Hai selezionato " + fileSelector.files.length + " file :\n"
+    for (f of fileSelector.files) {
+        s += f.name +" "+ f.size +"KB "+ 
+			f.type  +" "+ Date(f.lastModified) + "\n"
+    }   
+	alert (s)
+}
+
+
+</script>

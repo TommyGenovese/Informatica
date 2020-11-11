@@ -1,0 +1,44 @@
+[
+  {
+    "giorno": "lunedì",
+    "ora": "8",
+    "materia": "religione l 8",
+    "docente": "Acchiardi",
+    "aula": "Scampia"
+  },
+  {
+    "giorno": "martedì",
+    "ora": "9",
+    "materia": "religione m 9",
+    "docente": "Acchiardi",
+    "aula": "Scampia"
+  },
+  {
+    "giorno": "mercoledì",
+    "ora": "10",
+    "materia": "religione m 10",
+    "docente": "Acchiardi",
+    "aula": "Scampia"
+  },
+  {
+    "giorno": "giovedì",
+    "ora": "11",
+    "materia": "religione g 11",
+    "docente": "Acchiardi",
+    "aula": "Scampia"
+  },
+  {
+    "giorno": "venerdì",
+    "ora": "12",
+    "materia": "religione v 12",
+    "docente": "Acchiardi",
+    "aula": "Scampia"
+  },
+  {
+    "giorno": "sabato",
+    "ora": "10",
+    "materia": "religione s 10",
+    "docente": "Acchiardi",
+    "aula": "Scampia"
+  }
+]

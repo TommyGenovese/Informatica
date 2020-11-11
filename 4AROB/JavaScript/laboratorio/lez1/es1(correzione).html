@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+    <head></head>
+    <body>
+        <canvas id="CNV" width="300" height="200" style="border: 2px solid #008a17"></canvas>
+        <script type="text/javascript">
+            var ctx = CNV.getContext("2d");
+            const h=200;
+            let t = new Array();
+            let passo = 25;
+           
+            for (let i=0; i<10; i++){
+                t.push(Math.floor(Math.random()*10)+1)
+            }
+
+            ctx.lineWidth = 10;
+            ctx.strokeStyle = 'red';
+
+            for(let i=0; i<10; i++){
+                ctx.fillText(i, passo-15, h-2)
+                ctx.moveTo(passo, h);
+                ctx.lineTo(passo, h-t[i]*10);
+                ctx.stroke();
+                ctx.fillText(t[i], passo+5, h-t[i]*10-5)
+                passo = passo + 35;
+            }
+        </script>
+
+
+        <h1>Esercizio 2</h1>
+        <canvas id="CNV2" width = "300" height="200" style="border: 2px solid #0094ff"></canvas>
+        <script>
+            const N_MAX = 10;
+            const N_MIN = -10;
+            var ctx2 = CNV.getContext("2d");
+            let t2 =new Array();
+            let rnd;
+            let step = 35;
+            let x0 = 0;
+            let y0 = 100;
+            let pos = 0;
+
+            for (let i=0; i<10; i++){
+                rnd = Math.random(N_MIN + (Math.random()*((N_MAX-(N_MIN))+1)));
+                t2.push(rnd);
+            }
+
+            let max=Math.abs(t[0]);
+            for(let i=0; i<10; i++){
+                if (Math.abs(t2[i])>max)
+                    max = Math.abs(t2[i]);
+            }
+            const sc=(CNV2.heigth /2-10)/max;
+            ctx2.moveTo(x0, y0);
+            ctx2.lineTo(x0 + CNV2.width, y0);
+            ctx2.stroke();
+
+            ctx2.moveTo(x0, y0 - t2[0]*sc);
+            ctx2.fillText(t2[0], 5, y0 -t2[0]*sc);
+
+            for(let i=1; i<10; i++){
+                ctx2.lineTo(step, y0-t2[i]*sc);
+                ctx2.stroke();
+                ctx2.fillText(t2[i], step+5, y0-t2[i]*sc);
+                pos = pos +step;
+
+            }
+        </script>
+
+    </body>
+</html>

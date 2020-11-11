@@ -6,6 +6,7 @@
     <string name="accell">Accellerometro</string>
     <string name="tris">Gioco del tris</string>
     <string name="forza4">Gioco forza 4</string>
+    <string name="batnav">Gioco battaglia navale</string>
     <string name="camera">Fotocamera</string>
 
     <!-- alto e basso -->
@@ -33,5 +34,10 @@
 
     <!--Forza 4 Activity-->
     <string name="forza">Forza 4</string>
+
+    <!--Battaglia Navale-->
+    <string name="bat">Battaglia Navale</string>
+    <string name="io">IO</string>
+
 
 </resources>

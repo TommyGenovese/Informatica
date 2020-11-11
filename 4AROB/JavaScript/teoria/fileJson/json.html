@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Json</title>
+	<script src="Termometro.js"></script>
+</head>
+<body onload="frm.reset();caricaJson()" >
+	<form id='frm'>
+		<input type="text" id="txtVal" placeholder = "Inserisci la temperatura"> </input>
+		<input type="button" value="MISURA" onclick="misura(txtVal.value)"/>
+		<input type="button" value="STORICO" onclick="storico()"/>
+		<input type="button" value="CELSIUS" onclick="celsius()"/>
+		<input type="button" value="FAHRENHEIT" onclick="fahrenheit()"/>
+		<input type="button" value="TIPO" onclick="tipo()"/>
+		<input type="button" value="REPORT" onclick="report()"/>
+		
+	</form>
+	<div id="output"></div>
+</body>
+</html>
+<script type="text/javascript">
+	var obj1 = JSON.parse('{"nome":"Ugo","voti":{"o":8,"s":7}, "media":7.5}'); 
+
+	console.log(obj1)
+	
+	var vett = JSON.parse('[1,2,3]'); 
+	console.log(vett)
+	
+	var obj2 = { name: "John", age: function () {return 30;}, city: "New York"};
+	var str = JSON.stringify(obj2);
+	console.log(str)
+	
+	var t1 = new Termometro();
+			
+	function caricaJson(){
+		temp = JSON.parse('{"temperatura": 35, "storico":[12,0,35],"foo":10 }');
+		t1 = Object.assign(t1,temp) //copia le proprietà non ereditate e restituisce il risultato
+	}
+	
+
+</script>

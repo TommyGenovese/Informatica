@@ -1,0 +1,44 @@
+CREATE TABLE attori(
+	CodAttore INTEGER UNIQUE NOT NULL,
+	Nome CHAR,
+	AnnoNascita INTEGER NOT NULL CHECK (AnnoNascita LIKE "____"),
+	Nazionalita CHAR,
+	PRIMARY KEY(CodAttore AUTOINCREMENT)
+);
+
+CREATE TABLE film(
+	CodFilm INTEGER UNIQUE NOT NULL,
+	Titolo CHAR,
+	AnnoProduzione INTEGER NOT NULL CHECK (AnnoProduzione LIKE "____"),
+	Nazionalita CHAR,
+	Regista CHAR,
+	Genere CHAR,
+	PRIMARY KEY(CodFilm AUTOINCREMENT)
+);
+
+CREATE TABLE recita(
+	CodAttore INTEGER NOT NULL, 
+	CodFilm INTEGER NOT NULL,
+	FOREIGN KEY (CodAttore) REFERENCES attori (CodAttore),
+	FOREIGN KEY (CodFilm) REFERENCES film (codFilm),
+	PRIMARY KEY(CodAttore, CodFilm)
+);
+
+CREATE TABLE sala(
+	CodSala INTEGER UNIQUE NOT NULL,
+	Posti INTEGER NOT NULL CHECK(Posti>=1),
+	Nome CHAR,
+	Citta CHAR,
+	PRIMARY KEY(CodSala AUTOINCREMENT)
+);
+
+CREATE TABLE proiezione(
+	CodProiezione INTEGER UNIQUE NOT NULL, 
+	CodFilm INTEGER NOT NULL,
+	CodSala INTEGER NOT NULL,
+	Incasso NUMERIC NOT NULL CHECK(Incasso>0),
+	DataProiezione CHAR NOT NULL CHECK(DataProiezione LIKE "____-__-__"),
+	FOREIGN KEY (CodSala) REFERENCES sala (CodSala),
+	FOREIGN KEY (CodFilm) REFERENCES film (codFilm),
+	PRIMARY KEY(CodProiezione AUTOINCREMENT)
+);

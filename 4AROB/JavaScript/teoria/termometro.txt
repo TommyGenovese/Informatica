@@ -1,0 +1,35 @@
+1.       Progettare e realizzare l'oggetto Termometro. Del termometro sono d'interesse le seguenti funzionalità:
+·       Termometro: un costruttore di un nuovo termometro avente come temperatura misurata 0 (per rappresentare le temperature si usino interi).
+·        misura: aggiorna la misura del termometro con la temperatura passata come parametro (misurata in gradi Celsius).
+·        storico: visualizza tutte le temperature rilevate dal termometro: nell'ultima posizione c'è l'ultima temperatura registrata
+·        celsius: restituisce la temperatura misurata in gradi Celsius.
+·       fahrenheit: restituisce la temperatura misurata in gradi Fahrenheit f = c*9/5 + 32.
+·       tipo: restituisce il tipo di temperatura: "molto caldo" (t >45), "caldo" (45 >= t > 35), "ottimale" (35 >= t >18), "freddo" (18 >= t > 0), "molto freddo" (t >= 0).
+·        report: valuta la lista delle temperature acquisite in °C e restituisce le temperature max,min e media.
+L'interfaccia di input sarà costituita da una casella di testo che ha identificatore id=''txtVal'  e dei pulsanti che fanno ciascuna una delle possibili operazioni. Ogni volta che si inserisce un numero (controllare) dentro la casella di testo e si preme il pulsante MISURA, il valore immesso viene memorizzato nell'attributo tmp ed aggiunto all'array e viene simultaneamente stampato in una zona di output predisposta da un tag div con identificatore id='out'.L'area di out serve anche per tutte le altre visualizzazioni.
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Termometro</title>
+</head>
+<body>
+<script>
+	function Termometro(){
+		this.temperatura = 0
+		this.misura = function(temp){
+   		 	if(temp && !isNaN(temp)){
+				this.temperatura = temp
+			}
+		}
+	this.Celsius = 
+	}
+	var t1 = new Termometro();
+	t1.misura(21)
+	alert(t1.temperatura)
+</script>
+</body>
+</html>
+

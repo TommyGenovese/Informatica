@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JSON Leggi file</title>
+	<script src="Termometro.js"></script>
+</head>
+ <body>
+    <h1>
+      Legge un file json
+    </h1>
+    <input type="file" id="file-selector" accept=".json, .txt">
+    <p id="status"></p>
+	<form id='frm' style="visibility:hidden">
+		<input type="text" id="txtVal" placeholder = "Inserisci la temperatura"> </input>
+		<input type="button" value="MISURA" onclick="misura(txtVal.value)"/>
+		<input type="button" value="STORICO" onclick="storico()"/>
+		<input type="button" value="CELSIUS" onclick="celsius()"/>
+		<input type="button" value="FAHRENHEIT" onclick="fahrenheit()"/>
+		<input type="button" value="TIPO" onclick="tipo()"/>
+		<input type="button" value="REPORT" onclick="report()"/>
+		 <div id="output"></div>
+		
+	</form>
+  </body>
+</html>
+<script>
+	const status = document.getElementById('status');
+	const output = document.getElementById('output');	//per messaggi di errore
+
+	var t1 = new Termometro();
+				
+	function caricaTemperatura(stringa){
+		let temp=JSON.parse(stringa);
+		t1 = Object.assign(t1,temp) //copia le proprietà non ereditate e restituisce il risultato
+	}
+	
+	//verifica che il browser supporti questi oggetti
+	if (window.FileList && window.File && window.FileReader) {
+		document.getElementById('file-selector').addEventListener('change', caricaTesto); 
+	}
+
+	function caricaTesto(event){
+		output.src = '';
+		status.textContent = '';
+		const file = event.target.files[0]; //prende il primo file letto
+		
+		if (!file.type) {
+			status.textContent = 'Error: The File.type property does not appear to be supported on this browser.';
+			return;
+		}
+				
+		//Crea il FileReader
+		const reader = new FileReader();
+		
+		//si assegna il gestore dell'evento load: se la lettura va a buon fine esegue la funzione anonima che visualizza il contenuto
+		reader.addEventListener('load', event => {
+			frm.style.visibility = "visible"
+			output.innerHTML = event.target.result
+			caricaTemperatura(event.target.result)
+			});
+		
+		//legge il file come un file di testo
+		reader.readAsText(file);
+		
+		
+	}
+</script>

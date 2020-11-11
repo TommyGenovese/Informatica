@@ -62,8 +62,6 @@ public class TrisActivity extends AppCompatActivity {
                 m[i][j]=0;
             }
         }
-
-
         //poss 1
         /*b00.setOnClickListener(new myListener());
         b01.setOnClickListener(new myListener());

@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+
+</head>
+<body>
+    <canvas id="CNV" width="300" height="200" style="border: 1px solid #250081"></canvas>
+    
+    <script type="text/javascript">
+        "use strict";
+        var ctx = CNV.getContext("2d");
+        function Cerchio(ctx, x=0, y=0, r, g, b, radius){
+	    this.ctx = ctx;	//l'unico obbligatorio
+	    this.x = x;
+	    this.y = y;
+	    this.r = (r<0 || r>255? 0: r);
+	    this.b = (b<0 || b>255? 0: b);
+	    this.g = (g<0 || g>255? 0: g);
+	    this.radius = (radius<0? 0: radius);
+	//console.log(this)
+	
+	    this.show = function(){
+		    //this.ctx.clearRect(0,0,this.ctx.canvas.width, this.ctx.canvas.height)
+		    this.ctx.beginPath()
+		    "rgba(255,0,0,0.5)"
+		    this.ctx.fillStyle = "rgba("+this.r+","+this.g+","+this.b+",0.5)" //"rgba(255,0,0
+            this.ctx.strokeStyle = this.ctx.fillStyle
+		
+		    this.ctx.arc(this.x, this.y, this.radius,0, Math.PI *2, true)
+		    this.ctx.fill()
+		    this.ctx.stroke()
+		    this.ctx.closePath()
+	    }
+    }        
+    </script>
+    <script>
+        function aggiungiCerchio(){
+            let r = casuale(0,255);
+            let g = casuale(0,255);
+            let b = casuale(0,255);
+            let raggio = casuale(2,40)
+            let x = casuale(0,ctx.canvas.width)
+            let y = casuale(0,ctx.canvas.height)
+            cerchi.push(new Cerchio(ctx, x, y, r, g, b, raggio))
+        }
+        
+        function draw(cerchi){
+            for (let el in cerchi)
+                cerchi[el].show()
+        }
+        function casuale(min, max){
+            return parseInt(Math.random() * (max-min+1))+ min
+        }
+        let canvas = document.getElementById("canvas1")
+        let ctx = canvas.getContext("2d")
+        var cerchio = new Cerchio (ctx, canvas.width/2,canvas.height/2,255,0,0)
+        cerchio.show()
+        
+        var cerchi = []
+        for(let k=0; k<10;k++){
+            aggiungiCerchio()
+        }
+        draw(cerchi)
+
+        var cerchiJ = []
+        
+    </script>
+
+    <script type="text/javascript">
+    //restituisce il riferimento al canvas che si è deciso di disegnare
+    function creaCanvas(w,h) {
+        var body = document.getElementsByTagName('body')[0]
+	    var canvas = document.createElement('canvas')
+        body.appendChild(canvas)
+        canvas.style.border = "1px solid black"
+        canvas.style.width = (w || 500) +"px" 
+        canvas.style.height = (h || 300) +"px" 
+	    return canvas.getContext("2d")
+    }
+    </script>
+</body>
+</html>

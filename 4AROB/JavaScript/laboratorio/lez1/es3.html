@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <canvas id="CNV" width="300" height="200" style="border: 2px solid #250081;"></canvas>
+        <br>
+        
+        <input type="button" value="avanti" id="AVANTI"/>
+        <input type="button" value="indietro" id="INDIETRO"/>
+        <input type="button" value="alza" id="ALZA"/>
+        <input type="button" value="abbassa" id="ABBASSA"/>
+
+        <script type="text/javascript">
+            window.onload = muletto;
+            var ctx = CNV.getContext("2d");
+
+            ctx.moveTo(0, 190);
+            ctx.lineTo(300, 190);
+            ctx.stroke();
+            var mul = new Muletto();
+            mul.disegna(ctx);
+
+
+            function Muletto(){
+                this.x = 300/2
+                this.y = 200-70
+
+                ctx.fillStyle = "green"
+
+                this.disegna= function disegna(ctx){
+                    ctx.fillRect(this.x, this.y, 30, 50);
+                    this.x= x+30
+                    this.y = this.y+50
+                    ctx.fillRect(this.x, this.y, 40, -25);
+                    this.x=this.x-15
+
+                    //Ruote
+                    ctx.moveTo(this.x+10,this.y)
+                    ctx.arc(this.x, this.y, 10, 0, Math.PI, 0)
+                    ctx.stroke()
+                    ctx.fillStyle= "black"
+                    ctx.fill()
+                    this.x= this.x+40
+                    ctx.arc(this.x, this.y, 10, 0, Math.PI, 0)
+                    ctx.fillStyle= "black"
+                    ctx.fill()
+
+                    //Forca
+                    this.x=this.x-60
+                    
+                    ctx.moveTo(this.x, this.y)
+                    ctx.lineTo(this.x, this.y-60)
+                }
+                
+            }
+
+            
+
+            AVANTI.addEventListener("click", function(){
+                ctx.clearRect(-1,-1,CNV.width, CNV.height);
+                ctx.translate(10, 0);
+                disegna();
+            });
+            INDIETRO.addEventListener("click", function(){
+                ctx.clearRect(-1,-1,CNV.width, CNV.height);
+                ctx.translate(0, 10);
+                disegna();
+            });
+            ALZA.addEventListener("click", function(){
+                ctx.clearRect(-1,-1,CNV.width, CNV.height);
+                ctx.traslate(0, 2);
+                disegna();
+            });
+            ABBASSA.addEventListener("click", function(){
+                ctx.clearRect(-1,-1,CNV.width, CNV.height);
+                ctx.translate(0, -2);
+                disegna();
+            });
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES_010</title>
+    <script src="Cerchio.js" charset="utf-8"></script>
+    <script src="script.js" charset="utf-8"></script>
+</head>
+<body>
+
+<canvas id="canvas1" width="500px" height="300px" style="border: 1px black solid"></canvas>
+<script>
+    let canvas = document.getElementById("canvas1")
+    let ctx = canvas.getContext("2d")
+    let c = new Cerchio(ctx, canvas.width/2, canvas.height/2, 152,228,0, 30)
+    c.disegna()
+</script>
+</body>
+</html>

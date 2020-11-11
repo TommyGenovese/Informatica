@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head></head>
+    <body>
+        <canvas id="CNV" width="300" height="200" style="border: 2px solid #008a17"></canvas>
+        <script type="text/javascript">
+            //Disegnare un grafico a torta sul canvas usando avendo a disposizione un vettore
+            //di record contenente i dati di vari tipi di merce.
+            //Es3. Costruire un array di record per ottenere una struttura
+            //di dati non omogenei che possano contenere vari tipi di dato
+            //per ogni singola categoria.
+            var ctx = CNV.getContext("2d");
+            var data = [
+                {
+                    frutto: "mela",
+                    value: 222,
+                    color:"#0033ff",
+                    label: "blue"
+                },
+                {
+                    frutto: "pera",
+                    value: 583,
+                    color: "#00FF00",
+                    label: "Green"
+                },
+                {
+                    frutto: "banana",
+                    value: 430,
+                    color: "#ffe100",
+                    label: "yellow"
+                },
+                {
+                    frutto: "kiwi",
+                    value: 175,
+                    color: "#8a6101",
+                    label: "brown"
+                },
+            ];
+            
+            ctx.arc(150, 100, 50, 0, 0.5*Math.PI, 0);
+            ctx.stroke();
+            
+            
+
+        </script>
+    </body>
+</html>

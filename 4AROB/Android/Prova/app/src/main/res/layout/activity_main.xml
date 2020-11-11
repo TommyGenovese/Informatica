@@ -62,6 +62,12 @@
                 android:layout_height="wrap_content"
                 android:text="@string/forza4" />
 
+            <Button
+                android:id="@+id/btnBatnav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/batnav" />
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

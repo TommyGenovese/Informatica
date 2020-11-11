@@ -4,14 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private  static final String TAG= "Main Activity";
-    private Button btnSal, btnAltoBasso, btnAcc, btnTris, btnForza;
+    private Button btnSal, btnAltoBasso, btnAcc, btnTris, btnForza, btnBatnav;
     private TextView txtS;
 
     @Override
@@ -29,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         btnAltoBasso = findViewById(R.id.btnAltoBasso);
         btnTris = findViewById(R.id.btnTris);
         btnForza = findViewById(R.id.btnForza);
+        btnBatnav = findViewById(R.id.btnBatnav);
     }
 
     private void setupEventListener(){
@@ -69,6 +69,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+
+        btnBatnav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, BatNavActivity.class);
+                intent.putExtra("g1", "giocatore 1");
+                intent.putExtra("g1", "giocatore 2");
+                startActivity(intent);
+            }
+        });
+
 
         btnForza.setOnClickListener(new View.OnClickListener() {
             @Override
