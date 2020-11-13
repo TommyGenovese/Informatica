@@ -4,7 +4,7 @@ import java.sql.*;
 public class TestStatement {
     public static void main(String[] args) {
         Connection conn = null;
-        ResultSet iResult = 0;
+        int iResult = 0;
         ResultSet result;
         String URL = "jdbc:sqlite";
         String database ="test.db";
@@ -23,6 +23,7 @@ public class TestStatement {
         if(conn != null){
             try{
                 Statement stat1 = conn.createStatement();
+                stat1.execute("DELEATE FROM impiegati");
                 result = stat1.executeQuery("SELECT * FROM impiegati");
                 Statement stat2 = conn.createStatement();
                 iResult = stat2.executeQuery("INSERT INTO (nome, cognome, citta) VALUES (Jacopo, Van Cleeff, RoccaSpadiera)");
