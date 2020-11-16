@@ -4,8 +4,8 @@ import java.sql.*;
 public class TestStatement {
     public static void main(String[] args) {
         Connection conn = null;
-        int iResult = 0;
         ResultSet result;
+        ResultSet iResult;
         String URL = "jdbc:sqlite";
         String database ="test.db";
         String driver = "org.sqlite.JDBC";
